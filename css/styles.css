@@ -1,3 +1,6 @@
+/**
+ * Mixins
+ */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -368,7 +371,53 @@ textarea {
   box-sizing: border-box; }
 
 body {
-  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.05em; }
 
-h1 {
-  font-weight: 100; }
+.app-header {
+  color: #ffffff;
+  background: #7479bd;
+  font-weight: 300;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center; }
+  .app-header h1 {
+    font-size: 21px;
+    font-weight: 100;
+    margin: 0;
+    margin-right: auto; }
+    .app-header h1 b {
+      font-weight: 500; }
+    .app-header h1 sup {
+      font-weight: 100;
+      font-size: 0.6em; }
+  .app-header .alert-icon {
+    width: 20px;
+    height: 20px; }
+    .app-header .alert-icon img {
+      min-width: 100%; }
+  .app-header .user-id {
+    font-size: 14px;
+    font-weight: 100;
+    margin-left: 15px;
+    border-left: 1px solid #5e64bc;
+    padding: 10px 0 10px 15px; }
+    .app-header .user-id img {
+      display: none;
+      vertical-align: middle;
+      width: 32px;
+      height: 32px;
+      margin: 0 8px;
+      border: none;
+      border-radius: 50%; }
+  @media (min-width: 375px) {
+    .app-header {
+      padding: 10px 20px; }
+      .app-header h1 {
+        font-size: 21px; }
+      .app-header .alert-icon {
+        margin: 0 5px; }
+      .app-header .user-id {
+        padding: 5px 0 5px 15px; }
+        .app-header .user-id img {
+          display: inline-block; } }
