@@ -2,8 +2,8 @@
   background: $color-primary-dark;
 
   svg {
-    width: 32px;
-    height: 32px
+    width: 24px;
+    height: 24px
   }
 
   ul {
@@ -34,6 +34,13 @@
       }
     }
   }
+
+  @include media(landscape) {
+    svg {
+      width: 32px;
+      height: 32px
+    }
+  } // @landscape
 
   @include media(tablet) {
     ul {

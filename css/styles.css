@@ -480,8 +480,8 @@ textarea {
 .app-navigation {
   background: #4d4d71; }
   .app-navigation svg {
-    width: 32px;
-    height: 32px; }
+    width: 24px;
+    height: 24px; }
   .app-navigation ul {
     margin: 0;
     padding: 0 15px;
@@ -500,6 +500,10 @@ textarea {
       transition: fill .4s ease-out; }
     .app-navigation a.active path, .app-navigation a:hover path {
       fill: white; }
+  @media (min-width: 560px) {
+    .app-navigation svg {
+      width: 32px;
+      height: 32px; } }
   @media (min-width: 768px) {
     .app-navigation ul {
       display: flex;
