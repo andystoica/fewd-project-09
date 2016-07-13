@@ -7,13 +7,37 @@
 
 .app-content {
   header {
+    display: flex;
+
     h2 {
       display: none;
     }
+
     form {
+      flex: 1;
       background: $color-grey-light;
-      border-bottom: 1px solid $color-grey 
+      border-bottom: 1px solid $color-grey;
     }
+
+    @include media(landscape) {
+
+      h2 {
+        @include large-medium;
+        display: block;
+        padding: 10px 25px 0;
+        color: $color-grey-dark;
+        width: auto;
+      }
+
+      form {
+        border-left: 1px solid $color-grey;
+        text-align: right;
+
+        input {
+          max-width: 380px;
+        }
+      }
+    } // @landscape
 
   }
 } // .app-content

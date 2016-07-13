@@ -519,8 +519,24 @@ textarea {
   margin: 25px auto;
   background: #83c891; }
 
-.app-content header h2 {
-  display: none; }
-.app-content header form {
-  background: #fbfbfb;
-  border-bottom: 1px solid #dfdfdf; }
+.app-content header {
+  display: flex; }
+  .app-content header h2 {
+    display: none; }
+  .app-content header form {
+    flex: 1;
+    background: #fbfbfb;
+    border-bottom: 1px solid #dfdfdf; }
+  @media (min-width: 560px) {
+    .app-content header h2 {
+      font-size: 21px;
+      font-weight: 300;
+      display: block;
+      padding: 10px 25px 0;
+      color: #666666;
+      width: auto; }
+    .app-content header form {
+      border-left: 1px solid #dfdfdf;
+      text-align: right; }
+      .app-content header form input {
+        max-width: 380px; } }
