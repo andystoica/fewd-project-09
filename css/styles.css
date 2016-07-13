@@ -374,6 +374,43 @@ body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   letter-spacing: 0.05em; }
 
+form {
+  padding: 15px; }
+
+input[type="text"],
+input[type="search"],
+textarea,
+select {
+  width: 100%;
+  height: auto;
+  padding: .7rem;
+  background-color: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 100;
+  color: #666666;
+  outline: 0;
+  transition: all 0.3s; }
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: inset 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
+  border-color: #7479bd;
+  background-color: #fff; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../images/icon-down-arrow.svg") 97% center no-repeat;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.7);
+  background-size: 20px; }
+
+textarea {
+  min-height: 8rem; }
+
 .flex {
   display: flex;
   flex-wrap: wrap; }
@@ -383,7 +420,7 @@ body {
     width: 100%; }
   @media (min-width: 768px) {
     .flex .app-navigation {
-      max-width: 90px;
+      width: 90px;
       flex-grow: 0; }
     .flex .app-content {
       width: auto;
@@ -471,7 +508,7 @@ body {
       padding: 15px 0; }
       .app-navigation ul a {
         margin: 15px 0;
-        padding: 10px 20px;
+        padding: 10px 25px;
         border-left: 4px solid #4d4d71; }
         .app-navigation ul a.active, .app-navigation ul a:hover {
           border-color: #83c891; } }
@@ -481,3 +518,9 @@ body {
   height: 150px;
   margin: 25px auto;
   background: #83c891; }
+
+.app-content header h2 {
+  display: none; }
+.app-content header form {
+  background: #fbfbfb;
+  border-bottom: 1px solid #dfdfdf; }

@@ -13,7 +13,7 @@
   @include media(tablet) {
 
     .app-navigation {
-      max-width: 90px;
+      width: 90px;
       flex-grow: 0;
     } // .app-navigation
 

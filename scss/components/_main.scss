@@ -4,3 +4,16 @@
   margin: 25px auto;
   background: $color-secondary;
 }
+
+.app-content {
+  header {
+    h2 {
+      display: none;
+    }
+    form {
+      background: $color-grey-light;
+      border-bottom: 1px solid $color-grey 
+    }
+
+  }
+} // .app-content
