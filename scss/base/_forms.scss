@@ -18,6 +18,12 @@ select {
   transition: all .3s
 }
 
+input[type="search"] {
+  background: url("../img/icon-search-box.svg") 97% center no-repeat;
+  background-size: contain;
+}
+
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -29,8 +35,8 @@ select:focus {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../images/icon-down-arrow.svg") 97% center no-repeat;
-  background-color: rgba(255, 255, 255, .6);
+  background: url("../img/icon-down-arrow.svg") 97% center no-repeat;
+  background-color: $color-white;
   color: rgba(0, 0, 0, .7);
   background-size: 20px;
 }

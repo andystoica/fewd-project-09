@@ -393,6 +393,10 @@ select {
   outline: 0;
   transition: all 0.3s; }
 
+input[type="search"] {
+  background: url("../img/icon-search-box.svg") 97% center no-repeat;
+  background-size: contain; }
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -403,8 +407,8 @@ select:focus {
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: url("../images/icon-down-arrow.svg") 97% center no-repeat;
-  background-color: rgba(255, 255, 255, 0.6);
+  background: url("../img/icon-down-arrow.svg") 97% center no-repeat;
+  background-color: #ffffff;
   color: rgba(0, 0, 0, 0.7);
   background-size: 20px; }
 
