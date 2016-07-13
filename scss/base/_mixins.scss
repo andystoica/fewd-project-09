@@ -1,0 +1,77 @@
+/**
+ * Mixins
+ */
+
+// Media Query
+@mixin media($break) {
+  @if $break == tiny {
+    @media (min-width: $brk-very-small) {
+      @content;
+    }
+  } @else if $break == mobile {
+    @media (min-width: $brk-small) {
+      @content;
+    }
+  } @else if $break == landscape {
+    @media (min-width: $brk-small-landscape) {
+      @content;
+    }
+  } @else if $break == tablet {
+    @media (min-width: $brk-medium) {
+      @content;
+    }
+  } @else if $break == desktop {
+    @media (min-width: $brk-large) {
+      @content;
+    }
+  }
+}
+
+
+
+// Font size
+
+@mixin small-light {
+  font-size: $font-small;
+  font-weight: 100;
+}
+
+@mixin small-normal {
+  font-size: $font-small;
+  font-weight: 400;
+}
+
+@mixin small-bold {
+  font-size: $font-small;
+  font-weight: 800;
+}
+
+@mixin medium-light {
+  font-size: $font-medium;
+  font-weight: 100;
+}
+
+@mixin medium-normal {
+  font-size: $font-medium;
+  font-weight: 400;
+}
+
+@mixin medium-bold {
+  font-size: $font-medium;
+  font-weight: 800;
+}
+
+@mixin large-light {
+  font-size: $font-large;
+  font-weight: 100;
+}
+
+@mixin large-medium {
+  font-size: $font-large;
+  font-weight: 300;
+}
+
+@mixin large-bold {
+  font-size: $font-large;
+  font-weight: 500;
+}
