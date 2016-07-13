@@ -1,0 +1,58 @@
+.app-navigation {
+  background: $color-primary-dark;
+
+  svg {
+    width: 32px;
+    height: 32px
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  li {
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    padding: 15px 0 10px;
+    line-height: 1;
+    transition: border .4s ease-out;
+    path {
+      fill: rgba($color-white, .6);
+      transition: fill .4s ease-out;
+    }
+
+    &.active, &:hover {
+      path {
+        fill: rgba($color-white, 1);
+      }
+    }
+  }
+
+  @include media(tablet) {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding: 15px 0;
+
+      a {
+        margin: 15px 0;
+        padding: 10px 20px;
+        border-left: 4px solid $color-primary-dark;
+
+        &.active, &:hover {
+          border-color: $color-secondary;
+        }
+      }
+    }
+
+  } // @tablet
+
+} // .app-navigation

@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+
+  .app-navigation {
+    width: 100%;
+  } // .app-navigation
+
+  .app-content {
+    width: 100%;
+  } // .app-content
+
+  @include media(tablet) {
+
+    .app-navigation {
+      max-width: 90px;
+      flex-grow: 0;
+    } // .app-navigation
+
+    .app-content {
+      width: auto;
+      flex-grow: 1;
+    } // .app-content
+
+  } // @tablet
+
+} // .flex
