@@ -16,3 +16,24 @@
   }
 
 } // .flex
+
+.app-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  .full-zone {
+    flex: 0 100%;
+  }
+
+  .half-zone {
+    flex: 0 100%;
+  }
+
+  @include media(tablet)
+  {
+    .half-zone {
+      flex: 1 50%;
+    }
+  } // @tablet
+
+}

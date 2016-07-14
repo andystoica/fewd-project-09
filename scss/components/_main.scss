@@ -3,6 +3,7 @@
 
 .header-zone {
   display: flex;
+  flex: 0 100%;
 
   h2 {
     display: none;
@@ -39,16 +40,17 @@
 
 .alert-message {
   @include small-light;
-  margin: 25px;
+  margin: 24px;
   color: $color-white;
   background: $color-primary;
   border-radius: 5px;
   padding: 10px 15px;
   display: flex;
+  flex: 0 100%;
   align-items: center;
 
   p {
-    line-height: 1.3;
+    line-height: 1.5;
     margin: 0;
     padding-right: 25px;
     flex: 1;
@@ -65,4 +67,36 @@
     height: 20px;
   }
 
+}
+
+.full-zone,
+.half-zone {
+  @include small-normal;
+  padding: 16px 24px;
+  border-top: 1px solid $color-grey;
+  color: $color-grey-dark;
+  line-height: 1.5;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      @include small-normal;
+      margin-right: auto;
+      text-transform: uppercase;
+      color: $color-grey-dark;
+    }
+  }
+}
+
+#zone-1 {
+    border: none;
+}
+
+@include media(tablet) {
+  #zone-2,
+  #zone-5,
+  #zone-7 {
+    border-right: 1px solid $color-grey;
+  }
 }

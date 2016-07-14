@@ -2,9 +2,10 @@
 @import "base/mixins";
 @import "base/normalize";
 @import "base/general";
-@import "base/forms";
 
 @import "components/layout";
 @import "components/header";
 @import "components/navigation";
 @import "components/main";
+
+@import "elements/forms";
