@@ -1,43 +1,68 @@
-.ctn {
-  width: 50%;
-  height: 150px;
-  margin: 25px auto;
-  background: $color-secondary;
+.app-content {
 }
 
-.app-content {
-  header {
-    display: flex;
+.header-zone {
+  display: flex;
+
+  h2 {
+    display: none;
+  }
+
+  form {
+    flex: 1;
+    background: $color-grey-light;
+    border-bottom: 1px solid $color-grey;
+  }
+
+  @include media(landscape) {
 
     h2 {
-      display: none;
+      @include large-medium;
+      display: block;
+      padding: 10px 25px 0;
+      color: $color-grey-dark;
+      width: auto;
     }
 
     form {
-      flex: 1;
-      background: $color-grey-light;
-      border-bottom: 1px solid $color-grey;
+      border-left: 1px solid $color-grey;
+      text-align: right;
+
+      input {
+        max-width: 380px;
+      }
     }
+  } // @landscape
 
-    @include media(landscape) {
+} // .header-zone
 
-      h2 {
-        @include large-medium;
-        display: block;
-        padding: 10px 25px 0;
-        color: $color-grey-dark;
-        width: auto;
-      }
 
-      form {
-        border-left: 1px solid $color-grey;
-        text-align: right;
+.alert-message {
+  @include small-light;
+  margin: 25px;
+  color: $color-white;
+  background: $color-primary;
+  border-radius: 5px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
 
-        input {
-          max-width: 380px;
-        }
-      }
-    } // @landscape
+  p {
+    line-height: 1.3;
+    margin: 0;
+    padding-right: 25px;
+    flex: 1;
 
+    span {
+      font-weight: bold;
+      padding-right: 5px;
+    }
   }
-} // .app-content
+
+  a {
+    flex: 0 20px;
+    background: url("../img/icon-close.svg") center center no-repeat;
+    height: 20px;
+  }
+
+}
