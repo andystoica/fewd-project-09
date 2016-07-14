@@ -13,6 +13,7 @@
     .app-navigation {
       flex: 0 90px;
     }
+
   }
 
 } // .flex
@@ -20,6 +21,7 @@
 .app-content {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 
   .full-zone {
     flex: 0 100%;
@@ -29,8 +31,9 @@
     flex: 0 100%;
   }
 
-  @include media(tablet)
-  {
+  @include media(tablet) {
+    margin-bottom: 25px;
+
     .half-zone {
       flex: 1 50%;
     }

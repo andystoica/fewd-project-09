@@ -388,14 +388,17 @@ body {
 
 .app-content {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 50px; }
   .app-content .full-zone {
     flex: 0 100%; }
   .app-content .half-zone {
     flex: 0 100%; }
   @media (min-width: 768px) {
-    .app-content .half-zone {
-      flex: 1 50%; } }
+    .app-content {
+      margin-bottom: 25px; }
+      .app-content .half-zone {
+        flex: 1 50%; } }
 
 .app-header {
   color: #ffffff;
@@ -487,9 +490,6 @@ body {
         border-left: 4px solid #4d4d71; }
         .app-navigation ul a.active, .app-navigation ul a:hover {
           border-color: #83c891; } }
-
-.app-content {
-  padding-bottom: 50px; }
 
 .header-zone {
   display: flex;
@@ -718,3 +718,41 @@ button:hover {
   @media (min-width: 375px) {
     .user-record ul li:last-of-type {
       display: block; } }
+
+.user-activity {
+  padding: 15px 0;
+  border-bottom: 1px solid #dfdfdf; }
+  .user-activity:last-of-type {
+    border-bottom: none; }
+  .user-activity ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .user-activity ul li {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.2; }
+      .user-activity ul li img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px; }
+      .user-activity ul li span {
+        display: block;
+        line-height: 1.5; }
+        .user-activity ul li span:last-of-type {
+          font-size: 12px;
+          font-weight: 300; }
+      .user-activity ul li a {
+        font-size: 12px;
+        font-weight: 300;
+        margin: 0 10px;
+        display: block;
+        width: 12px;
+        height: 24px;
+        background: url("../img/icon-right-arrow.svg") center center no-repeat;
+        background-size: 32px; }
+      .user-activity ul li:last-of-type {
+        margin-left: auto; }
