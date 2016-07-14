@@ -1,0 +1,65 @@
+#dailyTraffic {
+
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+
+  .chart {
+    max-width: 275px;
+    flex: 1 85%;
+    min-height: 250px;
+  }
+
+  .legend {
+    flex: 1 30%;
+    display: none;
+
+    span {
+      display: block;
+      margin: 25px 15px 25px 10px;
+      padding-left: 25px;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: -5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background: $color-grey-medium;
+      }
+      &.color-1::before {
+        background-color: $color-primary;
+      }
+      &.color-2::before {
+        background-color: $color-secondary;
+      }
+      &.color-3::before {
+        background-color: $color-tertiary;
+      }
+
+    }
+  } // .legend
+
+  @include media(mobile) {
+    .chart {
+      max-width: 300px;
+    }
+  }
+
+  @include media(landscape) {
+    .chart {
+      max-width: none;
+    }
+    .legend {
+      display: block;
+    }
+  }
+}

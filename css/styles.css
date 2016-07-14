@@ -571,6 +571,48 @@ body {
   #zone-5,
   #zone-7 {
     border-right: 1px solid #dfdfdf; } }
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0; }
+  .chart-container .chart {
+    max-width: 275px;
+    flex: 1 85%;
+    min-height: 250px; }
+  .chart-container .legend {
+    flex: 1 30%;
+    display: none; }
+    .chart-container .legend span {
+      display: block;
+      margin: 25px 15px 25px 10px;
+      padding-left: 25px;
+      position: relative; }
+      .chart-container .legend span::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: -5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 5px;
+        background: #b2b2b2; }
+      .chart-container .legend span.color-1::before {
+        background-color: #7479bd; }
+      .chart-container .legend span.color-2::before {
+        background-color: #83c891; }
+      .chart-container .legend span.color-3::before {
+        background-color: #75b1be; }
+  @media (min-width: 375px) {
+    .chart-container .chart {
+      max-width: 300px; } }
+  @media (min-width: 560px) {
+    .chart-container .chart {
+      max-width: none; }
+    .chart-container .legend {
+      display: block; } }
+
 .setting {
   display: flex;
   align-items: center;
