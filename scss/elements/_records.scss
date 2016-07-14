@@ -1,0 +1,53 @@
+.user-record {
+  padding: 15px 0;
+  border-bottom: 1px solid $color-grey;
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li {
+      @include small-normal;
+      line-height: 1.2;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      span {
+        display: block;
+      }
+
+      a {
+        @include tiny-normal;
+        line-height: 1.5;
+        display: block;
+        text-decoration: none;
+        color: $color-primary;
+      }
+
+      &:last-of-type {
+        display: none;
+        margin-left: auto;
+      }
+    }
+  }
+
+  @include media(mobile) {
+    ul {
+      li {
+        &:last-of-type {
+          display: block;
+        }
+      }
+    }
+  }
+}

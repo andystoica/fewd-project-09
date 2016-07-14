@@ -31,6 +31,21 @@
 
 // Font size
 
+@mixin tiny-light {
+  font-size: $font-tiny;
+  font-weight: 100;
+}
+
+@mixin tiny-normal {
+  font-size: $font-tiny;
+  font-weight: 300;
+}
+
+@mixin tiny-bold {
+  font-size: $font-tiny;
+  font-weight: 500;
+}
+
 @mixin small-light {
   font-size: $font-small;
   font-weight: 100;

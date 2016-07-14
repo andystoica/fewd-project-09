@@ -488,6 +488,9 @@ body {
         .app-navigation ul a.active, .app-navigation ul a:hover {
           border-color: #83c891; } }
 
+.app-content {
+  padding-bottom: 50px; }
+
 .header-zone {
   display: flex;
   flex: 0 100%; }
@@ -679,3 +682,39 @@ button:hover {
       .social-group .social-stat {
         flex: 1 300px;
         margin: 15px; } }
+
+.user-record {
+  padding: 15px 0;
+  border-bottom: 1px solid #dfdfdf; }
+  .user-record:last-of-type {
+    border-bottom: none; }
+  .user-record ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center; }
+    .user-record ul li {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.2; }
+      .user-record ul li img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 15px; }
+      .user-record ul li span {
+        display: block; }
+      .user-record ul li a {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.5;
+        display: block;
+        text-decoration: none;
+        color: #7479bd; }
+      .user-record ul li:last-of-type {
+        display: none;
+        margin-left: auto; }
+  @media (min-width: 375px) {
+    .user-record ul li:last-of-type {
+      display: block; } }
