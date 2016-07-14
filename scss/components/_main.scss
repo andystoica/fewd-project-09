@@ -10,9 +10,16 @@
   }
 
   form {
+    margin: 0;
+    padding: 15px;
     flex: 1;
     background: $color-grey-light;
     border-bottom: 1px solid $color-grey;
+
+    input {
+      margin-bottom: 0;
+      background-color: $color-white;
+    }
   }
 
   @include media(landscape) {

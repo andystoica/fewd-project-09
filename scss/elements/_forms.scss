@@ -1,5 +1,5 @@
 form {
-  padding: 15px;
+  margin: 15px 0;
 }
 
 input[type="text"],
@@ -9,12 +9,14 @@ select {
   width: 100%;
   height: auto;
   padding: .7rem;
-  background-color: $color-white;
+  margin-bottom: 15px;
+  background-color: $color-grey-light;
   border: 1px solid $color-grey;
   border-radius: 5px;
   @include small-light;
   color: $color-grey-dark;
   outline: 0;
+  transition: border .3s;
 }
 
 input[type="search"] {
@@ -35,11 +37,41 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url("../img/icon-down-arrow.svg") 97% center no-repeat;
-  background-color: $color-white;
-  color: rgba(0, 0, 0, .7);
-  background-size: 20px;
+  background-color: $color-grey-light;
+  background-size: 32px;
 }
 
 textarea {
-  min-height: 8rem;
+  display: block;
+  min-height: 150px;
+}
+
+button {
+  @include small-bold;
+  width: 100%;
+  padding: 13px;
+  border-radius: 5px;
+  border: none;
+  background-color: $color-primary;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-white;
+  transition: all .3s;
+}
+
+button:hover {
+  background-color: $color-primary-dark;
+}
+
+.button-group {
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  button {
+    width: 47%;
+    &:last-of-type {
+      background-color: $color-grey-medium;
+    }
+  }
 }

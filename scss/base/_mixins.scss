@@ -43,7 +43,7 @@
 
 @mixin small-bold {
   font-size: $font-small;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 @mixin medium-light {
@@ -58,7 +58,7 @@
 
 @mixin medium-bold {
   font-size: $font-medium;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 @mixin large-light {
