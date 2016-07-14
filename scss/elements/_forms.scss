@@ -72,6 +72,9 @@ button:hover {
     width: 47%;
     &:last-of-type {
       background-color: $color-grey-medium;
+      &:hover {
+        background-color: $color-grey-dark;
+      }
     }
   }
 }

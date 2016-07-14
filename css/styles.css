@@ -635,3 +635,47 @@ button:hover {
     width: 47%; }
     .button-group button:last-of-type {
       background-color: #b2b2b2; }
+      .button-group button:last-of-type:hover {
+        background-color: #666666; }
+
+.social-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .social-group .social-stat {
+    flex: 0 100%;
+    border-radius: 5px;
+    padding: 25px 15px;
+    margin-bottom: 25px;
+    background-color: #fbfbfb;
+    border: 1px solid #dfdfdf;
+    display: flex;
+    align-items: center; }
+    .social-group .social-stat .social-badge {
+      width: 75px;
+      height: 75px;
+      background-color: #7479bd;
+      border-radius: 50%;
+      padding: 8px; }
+    .social-group .social-stat .social-data {
+      margin-left: 15px; }
+      .social-group .social-stat .social-data h4 {
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0;
+        padding-left: 5px;
+        color: #7479bd; }
+      .social-group .social-stat .social-data span {
+        margin: 0;
+        line-height: 1;
+        font-weight: 100;
+        font-size: 48px; }
+  @media (min-width: 375px) {
+    .social-group .social-stat {
+      justify-content: center; } }
+  @media (min-width: 768px) {
+    .social-group {
+      justify-content: space-between; }
+      .social-group .social-stat {
+        flex: 1 300px;
+        margin: 15px; } }
