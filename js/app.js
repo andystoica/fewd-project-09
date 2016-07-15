@@ -5,6 +5,42 @@ $('.alert-message a').click(function(){
 });
 
 
+// Form validator and submission
+
+// Build dialog Box
+var dialogBoxHTML  = '<div id="dialog" class="dialog-box">';
+    dialogBoxHTML += '  <div class="message">';
+    dialogBoxHTML += '    <p>Message.</p>'
+    dialogBoxHTML += '  </div>';
+    dialogBoxHTML += '</div>';
+
+$('body').append(dialogBoxHTML);
+
+// Hide all dialog boxes
+$(".dialog-box").hide();
+
+// Close dialog box when clicking on it
+$(".dialog-box").click(function(){
+  $(this).fadeOut();
+});
+
+// Check form content and display appropriate dialog box
+$("#send-message").click(function() {
+  // If either text fields is empty, return error message.
+  if ($("#user-search").val() === "" || $("#user-message").val() === "") {
+    var errorMessage = "Please fill in both fields";
+  // Otherwise return success message.
+  } else {
+    var errorMessage = "Message sent";
+  }
+
+  // Append the appropriate message into the message box.
+  $("#dialog p").text(errorMessage);
+  $("#dialog").fadeIn().delay(2000).fadeOut();
+  return false;
+});
+
+
 // Charts Global Settings
 Chart.defaults.global.defaultFontColor = '#666666';
 Chart.defaults.global.defaultFontFamily = "'Roboto', Helvetica, Arial, sans-serif";

@@ -80,7 +80,7 @@
           display: none;
         }
         &.user-activity-icon {
-          display: none;
+          // display: none;
           background: $color-primary-light;
         }
       }
@@ -112,7 +112,7 @@
 
   @include media(landscape) {
     ul li img.user-activity-icon {
-      display: block;
+      // display: block;
     }
   }
 
