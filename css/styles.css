@@ -419,9 +419,21 @@ body {
       font-size: 0.6em; }
   .app-header .alert-icon {
     width: 20px;
-    height: 20px; }
+    height: 20px;
+    position: relative; }
     .app-header .alert-icon img {
-      min-width: 100%; }
+      min-width: 100%;
+      cursor: pointer; }
+    .app-header .alert-icon.active::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #83c891; }
   .app-header .user-id {
     font-size: 14px;
     font-weight: 100;
@@ -491,6 +503,38 @@ body {
         .app-navigation ul a.active, .app-navigation ul a:hover {
           border-color: #83c891; } }
 
+.zone-navigation {
+  flex: 0 65%;
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap; }
+  .zone-navigation li {
+    flex: 1;
+    text-align: center;
+    padding: 5px 30px; }
+    .zone-navigation li a {
+      text-decoration: none;
+      color: #666666;
+      padding: 4px 40px;
+      border-radius: 15px; }
+      .zone-navigation li a:hover {
+        background: rgba(116, 121, 189, 0.1); }
+      .zone-navigation li a.active {
+        background: #83c891;
+        color: #ffffff; }
+  @media (min-width: 560px) {
+    .zone-navigation {
+      justify-content: flex-end; }
+      .zone-navigation li {
+        flex: 0;
+        padding: 5px 5px; }
+        .zone-navigation li a {
+          padding: 4px 15px; } }
+
 .header-zone {
   display: flex;
   flex: 0 100%; }
@@ -554,7 +598,8 @@ body {
   .full-zone header,
   .half-zone header {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
     .full-zone header h3,
     .half-zone header h3 {
       font-size: 14px;
@@ -577,11 +622,11 @@ body {
   align-items: center;
   padding: 25px 0; }
   .chart-container .chart {
-    max-width: 275px;
-    flex: 1 85%;
+    max-width: 270px;
+    flex: 1 65%;
     min-height: 250px; }
   .chart-container .legend {
-    flex: 1 30%;
+    flex: 1 35%;
     display: none; }
     .chart-container .legend span {
       display: block;
@@ -606,7 +651,7 @@ body {
         background-color: #75b1be; }
   @media (min-width: 375px) {
     .chart-container .chart {
-      max-width: 300px; } }
+      max-width: 325px; } }
   @media (min-width: 560px) {
     .chart-container .chart {
       max-width: none; }
@@ -848,6 +893,11 @@ button:hover {
         height: 40px;
         border-radius: 50%;
         margin-right: 15px; }
+        .user-activity ul li img.user-avatar {
+          display: none; }
+        .user-activity ul li img.user-activity-icon {
+          display: none;
+          background: #e2e3f5; }
       .user-activity ul li span {
         display: block;
         line-height: 1.5; }
@@ -865,3 +915,6 @@ button:hover {
         background-size: 32px; }
       .user-activity ul li:last-of-type {
         margin-left: auto; }
+  @media (min-width: 560px) {
+    .user-activity ul li img.user-activity-icon {
+      display: block; } }

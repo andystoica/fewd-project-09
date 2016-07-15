@@ -9,13 +9,13 @@
   padding: 25px 0;
 
   .chart {
-    max-width: 275px;
-    flex: 1 85%;
+    max-width: 270px;
+    flex: 1 65%;
     min-height: 250px;
   }
 
   .legend {
-    flex: 1 30%;
+    flex: 1 35%;
     display: none;
 
     span {
@@ -50,7 +50,7 @@
 
   @include media(mobile) {
     .chart {
-      max-width: 300px;
+      max-width: 325px;
     }
   }
 

@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web App Dashboard</title>
     <link rel="stylesheet" href="css/styles.css" type='text/css'>
-    <link rel="stylesheet" href="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
   </head>
   <body>
     <header class="app-header">
       <h1><b>Super</b>Dash<sup>&trade;</sup></h1>
 
-      <div class="alert-icon">
+      <div class="alert-icon active">
         <img src="img\icon-bell.svg" alt="Alerts">
       </div>
 
@@ -114,9 +115,15 @@
             <a class="alert-close" href=""></a>
         </div>
 
-        <div class="full-zone" id="zone-1">
+        <div class="full-zone" id="zone-1"> <!-- Chart - General Traffic -->
           <header>
             <h3>Traffic</h3>
+            <ul class="zone-navigation">
+              <li><a href="#">Hourly</a></li>
+              <li><a href="#">Daily</a></li>
+              <li><a href="#" class="active">Weekly</a></li>
+              <li><a href="#">Monthly</a></li>
+            </ul>
           </header>
           <div class="chart-container">
             <div class="chart">
@@ -125,7 +132,7 @@
           </div>
         </div>
 
-        <div class="half-zone" id="zone-2">
+        <div class="half-zone" id="zone-2"> <!-- Chart - Daily Traffic -->
           <header>
             <h3>Daily Traffic</h3>
           </header>
@@ -282,7 +289,10 @@
           <div class="user-activity">
             <ul>
               <li>
-                <img src="img/avatar-2.jpg" alt="Lila Finch">
+                <img class="user-avatar" src="img/avatar-2.jpg" alt="Lila Finch">
+              </li>
+              <li>
+                <img class="user-activity-icon" src="img/icon-like.svg" alt="User signed in">
               </li>
               <li>
                 <span>Lila Finch liked the post Facebook's Changes for 2016</span>
@@ -297,7 +307,10 @@
           <div class="user-activity">
             <ul>
               <li>
-                <img src="img/avatar-5.jpg" alt="Orlando Chavez">
+                <img class="user-avatar" rc="img/avatar-5.jpg" alt="Orlando Chavez">
+              </li>
+              <li>
+                <img class="user-activity-icon" src="img/icon-comment.svg" alt="User signed in">
               </li>
               <li>
                 <span>Orlando Chavez commented on Facebook's Changes for 2016</span>
@@ -312,7 +325,10 @@
           <div class="user-activity">
             <ul>
               <li>
-                <img src="img/avatar-3.jpg" alt="Daniel Marshall">
+                <img class="user-avatar" src="img/avatar-3.jpg" alt="Daniel Marshall">
+              </li>
+              <li>
+                <img class="user-activity-icon" src="img/icon-post.svg" alt="User signed in">
               </li>
               <li>
                 <span>Daniel Marshall posted Super Dashboards Tips and Tricks</span>
@@ -327,10 +343,13 @@
           <div class="user-activity">
             <ul>
               <li>
-                <img src="img/avatar-4.jpg" alt="Carla Conley">
+                <img class="user-avatar" src="img/avatar-4.jpg" alt="Carla Conley">
               </li>
               <li>
-                <span>Carla Conley commented on Super Dashboards Tips and Tricks</span>
+                <img class="user-activity-icon" src="img/icon-signed.svg" alt="User signed in">
+              </li>
+              <li>
+                <span>Carla Conley signed up on Super Dash</span>
                 <span>2 days ago</span>
               </li>
               <li>
@@ -417,7 +436,6 @@
 
       </main>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

@@ -76,6 +76,13 @@
         height: 40px;
         border-radius: 50%;
         margin-right: 15px;
+        &.user-avatar {
+          display: none;
+        }
+        &.user-activity-icon {
+          display: none;
+          background: $color-primary-light;
+        }
       }
 
       span {
@@ -103,4 +110,10 @@
     }
   }
 
-}
+  @include media(landscape) {
+    ul li img.user-activity-icon {
+      display: block;
+    }
+  }
+
+} // .user-activity

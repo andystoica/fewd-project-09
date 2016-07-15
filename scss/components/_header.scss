@@ -26,9 +26,23 @@
   .alert-icon {
     width: 20px;
     height: 20px;
+    position: relative;
 
     img {
       min-width: 100%;
+      cursor: pointer;
+    }
+
+    &.active::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $color-secondary;
     }
 
   } // .alert-icon

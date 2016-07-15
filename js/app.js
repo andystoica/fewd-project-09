@@ -1,3 +1,10 @@
+// Close alert windows on clicking the anchor element
+$('.alert-message a').click(function(){
+  $(this).parent().fadeOut();
+  return false;
+});
+
+
 // Charts Global Settings
 Chart.defaults.global.defaultFontColor = '#666666';
 Chart.defaults.global.defaultFontFamily = "'Roboto', Helvetica, Arial, sans-serif";
