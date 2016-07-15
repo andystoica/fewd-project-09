@@ -4,13 +4,12 @@ $('.alert-message a').click(function(){
   return false;
 });
 
-
 // Form validator and submission
 
 // Build dialog Box
 var dialogBoxHTML  = '<div id="dialog" class="dialog-box">';
     dialogBoxHTML += '  <div class="message">';
-    dialogBoxHTML += '    <p>Message.</p>'
+    dialogBoxHTML += '    <p>Message.</p>';
     dialogBoxHTML += '  </div>';
     dialogBoxHTML += '</div>';
 
@@ -26,12 +25,13 @@ $(".dialog-box").click(function(){
 
 // Check form content and display appropriate dialog box
 $("#send-message").click(function() {
+  var errorMessage = "";
   // If either text fields is empty, return error message.
   if ($("#user-search").val() === "" || $("#user-message").val() === "") {
-    var errorMessage = "Please fill in both fields";
+    errorMessage = "Please fill in both fields";
   // Otherwise return success message.
   } else {
-    var errorMessage = "Message sent";
+    errorMessage = "Message sent";
   }
 
   // Append the appropriate message into the message box.
